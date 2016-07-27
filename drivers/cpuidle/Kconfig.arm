@@ -74,3 +74,10 @@ config ARM_MVEBU_V7_CPUIDLE
 	depends on ARCH_MVEBU && !ARM64
 	help
 	  Select this to enable cpuidle on Armada 370, 38x and XP processors.
+
+config ARM_SUNXI_CPUIDLE
+	bool "CPU Idle driver for Allwinner SoCs"
+	depends on ARCH_SUNXI && ARM_PSCI && !ARM64
+	select ARM_CPU_SUSPEND
+	help
+	  Select this to enable cpu idle on Allwinner sunXi processors.
